@@ -1,0 +1,567 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.0">
+    
+    
+      
+        <title>Module 2 - Linux Essentials Course</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.33e2939f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ef6f36e2.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ndg-linux-essentials-chapter-2-operating-systems" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Linux Essentials Course" class="md-header__button md-logo" aria-label="Linux Essentials Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Linux Essentials Course
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Module 2
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Linux Essentials Course" class="md-nav__button md-logo" aria-label="Linux Essentials Course" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Linux Essentials Course
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Course Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module1/" class="md-nav__link">
+        Module 1
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Module 2
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Module 2
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-operating-systems" class="md-nav__link">
+    2.1 Operating Systems.
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Operating Systems.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-decision-points-the-first-decision-when-specifying-any-computer-system" class="md-nav__link">
+    2.1.1 Decision Points (The first decision when specifying any computer system).
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-microsoft-windows" class="md-nav__link">
+    2.2 Microsoft Windows.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-apple-macos" class="md-nav__link">
+    2.3 Apple macOS.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-linux" class="md-nav__link">
+    2.4 Linux.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#241-linux-distributions" class="md-nav__link">
+    2.4.1 Linux Distributions.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#21-operating-systems" class="md-nav__link">
+    2.1 Operating Systems.
+  </a>
+  
+    <nav class="md-nav" aria-label="2.1 Operating Systems.">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#211-decision-points-the-first-decision-when-specifying-any-computer-system" class="md-nav__link">
+    2.1.1 Decision Points (The first decision when specifying any computer system).
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#22-microsoft-windows" class="md-nav__link">
+    2.2 Microsoft Windows.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#23-apple-macos" class="md-nav__link">
+    2.3 Apple macOS.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#24-linux" class="md-nav__link">
+    2.4 Linux.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#241-linux-distributions" class="md-nav__link">
+    2.4.1 Linux Distributions.
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="ndg-linux-essentials-chapter-2-operating-systems"><center>NDG Linux Essentials - Chapter 2 - Operating Systems</center></h1>
+<h2 id="21-operating-systems">2.1 Operating Systems.</h2>
+<p>An operating system is software that runs on a computing device and manages the hardware and software components that make up a functional computing system.</p>
+<p>Modern operating systems don’t just manage hardware and software resources:</p>
+<ul>
+<li>they schedule programs to run in a multi-tasking manner (sharing the processor so that multiple tasks can occur apparently simultaneously)</li>
+<li>provide standard services that allow users and programs to request something happen (for example a print job) from the operating system</li>
+<li>provided it’s properly requested, the operating system will <em>accept the request and perform the function needed</em>.</li>
+</ul>
+<p>Regardless computer complexity (server, supercomputer, Desktop, etc), the generic term <em>operating system</em> is used to describe whatever software is booted and run on a device.</p>
+<p><img alt="im1" src="../images/2021/04/im2.png" /></p>
+<p>Computer users today have a choice mainly between three major operating systems:
+- <strong>Microsoft Windows</strong>
+  - It is unique in its underlying code.
+- <strong>Apple macOS</strong>
+  - It is a fully-qualified UNIX distribution based on BSD Unix. Complemented by a large amount of proprietary code.
+  - It runs on hardware specifically optimized.
+- <strong>Linux</strong>
+  - Linux can be any one of hundreds of distribution packages designed or optimized for whatever task is required.</p>
+<h3 id="211-decision-points-the-first-decision-when-specifying-any-computer-system">2.1.1 Decision Points (The first decision when specifying any computer system).</h3>
+<p><strong>The machine’s role</strong>:
+- Will you be sitting at the console running productivity applications or web browsing? &rarr; <em>Desktop</em>
+- Will the machine be accessed remotely by many users or provide services to remote users? &rarr; <em>Server</em></p>
+<blockquote>
+<p>Servers generally run as a CLI, which frees up resources for the real purpose of the computer: serving information to clients</p>
+</blockquote>
+<p><strong>Function</strong>.</p>
+<ul>
+<li>Is there specific software it needs to run, or specific functions it needs to perform?</li>
+<li>Will there be hundreds, even thousands, of these machines running at the same time?</li>
+<li>What is the skill-set of the team managing the computer and software?</li>
+</ul>
+<p><strong>Life Cycle</strong>.
+The service lifetime and risk tolerance of the server also needs to be determined.</p>
+<ul>
+<li>Operating systems and software upgrades come on a periodic basis, called a <strong>release cycle.</strong></li>
+<li>Vendors only support older versions of software for a certain period of time before not offering any updates; this is called a <strong>maintenance cycle or life cycle</strong>.</li>
+</ul>
+<blockquote>
+<p>In an enterprise server environment, maintenance and release cycles are critical considerations because it is time-consuming and expensive to do major upgrades.
+There is a fair amount of work involved in upgrading a server due to specialized configurations, application software patching and user testing, so a proactive organization will seek to maximize their return on investment in both human and monetary capital.
+Modern data centers are addressing this challenge through virtualization.
+The need for physical hardware upgrades has also been decreased immensely with the advent of cloud services providers like Amazon Web Services, Rackspace, and Microsoft Azure.</p>
+</blockquote>
+<p><strong>Stability</strong>.
+Individual software releases can be characterized as beta or stable depending on where they are in the release cycle.</p>
+<ul>
+<li>Users who need the latest features can decide to use beta software.</li>
+<li>Software in the open source realm is often released for peer review.</li>
+<li>Production servers typically use stable software unless needed features are not available and the risk is outweighed.</li>
+<li>Conversely, proprietary software will often be kept secret for most of its development.</li>
+</ul>
+<p><strong>Compatibility</strong>.</p>
+<p>Another loosely-related concept is backward compatibility which refers to the ability of later operating systems to be compatible with software made for earlier versions.</p>
+<p>The norm for open source software development is to ensure backward compatibility first and break things only as a last resort.  The common practice of maintaining and versioning libraries of functions helps this greatly.</p>
+<p><strong>Cost</strong>.</p>
+<p>Ultimately, the choice of <strong>operating system</strong> will be affected by available hardware, staff resources and skill, cost of purchase, maintenance, and projected future requirements.</p>
+<p><strong>Interface</strong>.</p>
+<p>Today, operating systems offer both GUI and CLI interfaces, however, most consumer operating systems (Windows, macOS) are designed to shield the user from the ins and outs of the CLI.</p>
+<h2 id="22-microsoft-windows">2.2 Microsoft Windows.</h2>
+<p>Microsoft offers different operating systems according to the machine’s role:</p>
+<ul>
+<li>desktop:</li>
+<li>The desktop version of Windows has undergone various naming schemes with the current version</li>
+<li>New versions of this OS come out every 3-5 years and tend to be supported for many years.</li>
+<li>Backward compatibility is a priority for Microsoft.</li>
+<li>server</li>
+<li>The server can run a GUI but recently Microsoft, largely as a competitive response to Linux, has made incredible strides in its command line scripting capabilities through PowerShell.</li>
+<li>Microsoft also actively encourages enterprise customers to incorporate its Azure cloud service.</li>
+</ul>
+<h2 id="23-apple-macos">2.3 Apple macOS.</h2>
+<p>Apple makes the macOS operating system, which is partially based on software from the FreeBSD project and has undergone UNIX certification. It is well known for being “easy to use”.</p>
+<p>On the server side, macOS Server is primarily aimed at smaller organizations. It also provides integration with iOS devices like the iPhone and iPad.</p>
+<h2 id="24-linux">2.4 Linux.</h2>
+<p>Linux users typically obtain an operating system by downloading a distribution.</p>
+<p>A Linux distribution is a bundle of software, typically comprised of:</p>
+<ul>
+<li>The Linux Kernel.</li>
+<li>Utilities.</li>
+<li>Management tools.</li>
+<li>Software with means to update core software and install additional applications.</li>
+</ul>
+<blockquote>
+<p>The distribution takes care of setting up the storage, building the kernel and installing hardware drivers, as well as installing applications and utilities to make a fully functional computer system.</p>
+</blockquote>
+<p>The number of Linux distributions available numbers in the hundreds, so the choice can seem daunting at first. Decision rules (the same to choose an operating system):</p>
+<p><strong>Role</strong>.
+The number of Linux distributions available numbers in the hundreds, so the choice can seem daunting at first.
+Distributions are available for a much wider variety of systems, from commercial offerings to specialized; from distribution create to power a supercomputer to embedded systems. These might focus on running application or web servers, productivity desktops, point of sales systems, tools dedicated to electronics design or statistical computing.</p>
+<p><strong>Function</strong>.
+For the most part, concerns over security have been addressed through the large open source community, which monitors kernel changes for vulnerabilities and provides bug reporting and fixes at a much larger scale.</p>
+<p>Support for necessary applications may vary and is, therefore, an additional consideration. Often application vendors choose a subset of distributions to support.</p>
+<p><strong>Life Cycle</strong>.</p>
+<p>Most distributions have both major and minor update cycles to introduce new features and fix existing bugs. Additionally, there are development packages where users can contribute code and submit patches for possible inclusion into new releases..</p>
+<p>Linux distributions can be broadly classed in two main categories:
+- <em>enthusiast</em>
+  - An enthusiast distribution such as openSUSE’s Tumbleweed has a fast update cycle, is not supported for enterprise and may not contain (or drop) features or software in the next version.</p>
+<ul>
+<li><em>enterprise</em></li>
+<li>Enterprise distributions are almost the exact opposite, in that they take care to be stable and consistent, and offer enterprise-grade support for extended periods, anywhere from 5-13 years in the case of SUSE.</li>
+</ul>
+<blockquote>
+<p>Application software may be written such that it only supports a specific release of a distribution, requiring users to remain on an older, less secure operating system than they might like. Therefore, some Linux releases are considered to have long-term support (LTS) of 5 years or more while others are only supported for two years or less.</p>
+</blockquote>
+<p><strong>Stability</strong>.</p>
+<ul>
+<li>
+<p>Some distributions offer <em>stable</em>, <em>testing</em>, and <em>unstable releases.</em>
+When features have been integrated into the system for a long time, with most of the bugs and issues addressed, the software moves through <em>testing</em> into the <em>stable</em> release.</p>
+</li>
+<li>
+<p>Other releases depend on beta distributions.
+Fedora is often considered the community-oriented beta release of RedHat.</p>
+</li>
+<li>Features are added and changed in the Fedora release before finding their way into the enterprise-ready RedHat distribution.</li>
+</ul>
+<p><strong>Cost</strong>.</p>
+<p>Your chosen Linux distribution itself might be zero cost, but paying for support may be worthwhile depending on organizational needs and capabilities.</p>
+<p><strong>Interface</strong>.</p>
+<p>Linux can be used in one of two ways:
+- graphical (GUI)
+  - In graphical mode, users can have several different windows with terminal applications (shells) open, which is very helpful when performing tasks on multiple remote computers. Administrators and users can log-in with their username and password through a graphical interface.
+- non-graphical (CLI).
+  - The second type of interface, the CLI, is a text-based interface to the computer, where the user types in a command and the computer then executes it.
+  - The CLI <em>environment</em> is provided by an application on the computer known as a <strong>terminal</strong>. ‌⁠​⁠​ 
+    - The <em>terminal</em> accepts what the user types and passes to a <em>shell</em>.
+    - The shell interprets what the user has typed into instructions that can be executed by the operating system.
+    - Outputs or error could be displayed in the terminal.
+  - Text editors, web browsers, and email clients are all presented in text format only.
+        - This is how UNIX operated before graphical environments were the norm.</p>
+<h2 id="241-linux-distributions">2.4.1 Linux Distributions.</h2>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../module1/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Module 1
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}, "search": "../assets/javascripts/workers/search.fe42c31b.min.js", "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d892486b.min.js"></script>
+      
+    
+  </body>
+</html>
